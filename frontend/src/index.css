@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Arial;
+
+  background: linear-gradient(135deg, #0f172a, #020617);
+
+  color: white;
+}
+
+/* center layout */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  padding: 20px;
+}
+
+/* card */
+
+.card {
+  width: 470px;
+
+  background: #0f172a;
+
+  padding: 28px;
+
+  border-radius: 14px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* title */
+
+h2 {
+  margin-bottom: 8px;
+
+  font-size: 22px;
+}
+
+/* role text */
+
+.role {
+  font-size: 13px;
+
+  color: #94a3b8;
+
+  margin-bottom: 18px;
+}
+
+/* input */
+
+input {
+  width: 100%;
+
+  padding: 12px;
+
+  border-radius: 8px;
+
+  border: 1px solid #1e293b;
+
+  background: #020617;
+
+  color: white;
+
+  margin-bottom: 12px;
+
+  outline: none;
+}
+
+input:focus {
+  border-color: #3b82f6;
+}
+
+/* buttons */
+
+button {
+  width: 100%;
+
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+/* primary button */
+
+.primary {
+  background: #2563eb;
+
+  color: white;
+
+  margin-bottom: 18px;
+}
+
+.primary:hover {
+  background: #1d4ed8;
+}
+
+/* logout */
+
+.logout {
+  background: #ef4444;
+
+  margin-top: 18px;
+}
+
+.logout:hover {
+  background: #dc2626;
+}
+
+.task_container {
+  max-height: 20rem;
+  overflow: auto;
+}
+
+/* task card */
+
+.task {
+  background: #020617;
+
+  border: 1px solid #1e293b;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  margin-bottom: 10px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+/* task title */
+
+.task span {
+  max-width: 250px;
+
+  word-wrap: break-word;
+}
+
+/* action button */
+.action_button {
+  display: flex;
+}
+/* delete button */
+
+.delete {
+  background: #334155;
+  color: white;
+  width: 90px;
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+.delete:hover {
+  background: #475569;
+}
+
+/* link */
+
+.link {
+  color: #60a5fa;
+
+  font-size: 14px;
+
+  text-align: center;
+
+  display: block;
+
+  margin-top: 10px;
+}
