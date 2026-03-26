@@ -78,6 +78,22 @@ input:focus {
   border-color: #3b82f6;
 }
 
+select {
+  width: 100%;
+
+  padding: 12px;
+
+  border-radius: 8px;
+
+  border: 1px solid #1e293b;
+
+  background: #020617;
+
+  color: white;
+
+  margin-bottom: 12px;
+}
+
 /* buttons */
 
 button {

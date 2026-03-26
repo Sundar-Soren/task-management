@@ -1,6 +1,6 @@
 import { useState } from "react";
 import API from "../api/axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 export default function Register() {
@@ -8,15 +8,18 @@ export default function Register() {
     name: "",
     email: "",
     password: "",
+    role: "user",
   });
+  const nav = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      await API.post("/auth/register", form);
-
+      const res = await API.post("/auth/register", form);
+      localStorage.setItem("token", res.data.token);
       toast.success("Account created");
+      nav("/dashboard");
     } catch (err) {
       toast.error(err.response?.data?.message || "Error");
     }
@@ -59,6 +62,19 @@ export default function Register() {
             }
           />
 
+          {/* role dropdown */}
+          <select
+            value={form.role}
+            onChange={(e) =>
+              setForm({
+                ...form,
+                role: e.target.value,
+              })
+            }
+          >
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+          </select>
           <button>Register</button>
         </form>
 
